@@ -90,9 +90,6 @@ main .title-box {
 }
 
 main .content-grid {
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
   width: 100%;
   padding-top: 20px;
 }
@@ -100,10 +97,9 @@ main .content-grid {
 .content-item {
   background-color: #b8e8ff;
   padding: 20px 50px;
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 350px;
   box-sizing: border-box;
   border-radius: 8px;
   border-bottom: 8px solid #2c3e50;
