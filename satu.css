@@ -1,0 +1,179 @@
+/* SIDEBAR */
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  
+  
+  #sidebar {
+    color: #fff;
+    background-color: #2c3e50;
+    width: 300px;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px 20px 30px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s;
+  }
+  
+  #sidebar.active {
+    left: -300px;
+  }
+  
+  #sidebar #close-menu {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 15px;
+  }
+  
+  #sidebar i {
+    margin-right: 12px;
+    font-size: 1.3rem;
+  }
+  
+  #sidebar #sidebar-header {
+    padding-bottom: 30px;
+  }
+  
+  #sidebar-header h3 {
+    text-align: left;
+    font-size: 1.3rem;
+  }
+  
+  #sidebar #welcome {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #sidebar-header #welcome {
+    font-weight: bold;
+  }
+  
+  #sidebar a {
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 12px;
+    margin-bottom: 12px;
+    text-decoration: none;
+    display: block;
+    border-radius: 8px;
+  }
+  
+  #sidebar-menu .active,
+  #sidebar a:hover {
+    background-color: #fff;
+    color: #2c3e50;
+  }
+  
+  #sidebar #logout {
+    margin-top: auto;
+    text-align: left;
+    padding: 12px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+  }
+  
+  #sidebar #logout:hover {
+    color: #2c3e50;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+
+  /* konten */
+  .row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .judul {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 70px;
+    
+  }
+
+  .content {
+    font-size: 1.2rem;
+    margin-left: 300px;
+    padding: 20px;
+    transition: margin-left 0.3s;
+  }
+  .content.active {
+    margin-left: 0px;
+  }
+  
+  .content .action {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+  }
+  
+  .action #hamburger-menu {
+    border: 2px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 0 8px;
+    margin-right: 20px;
+  }
+
+  /* table*/
+
+  .kelas p{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .tabel {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+    justify-content: center;
+    border-color: black;
+  }
+
+  thead {
+    text-align: center;
+  }
+
+  .number{
+    text-align: center;
+  }
+
+  th, td{
+    border: 2px solid black;
+  }
+
+  td {
+    text-align:start;
+  }
+  th {
+    background-color: #2c3e50;
+  }
+
+  tbody {
+    background-color: #2c3e50;
+  }
+
+  .keterangan input {
+    margin-left: 20px;
+  }
