@@ -15,25 +15,29 @@
             <thead>
                 <tr>
                     <th>No</th>
-                    <th>ID Kartu</th>
+                    <th>NISN</th>
                     <th>Nama Siswa</th>
                     <th>Kelas</th>
-                    <th>NISN</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
                     //koneksi ke database
-                    include 
+                    include "koneksi.php";
+
+                    //baca data karyawan
+                    $sql = mysqli_query($konek, "select * from siswa");
+                    $no = 0;
+                    while($data = mysqli_fetch_array($sql)){
+                        $no++;
                 ?>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td> <?php echo $no; ?></td>
+                    <td><?php echo $data['NISN'];?></td>
+                    <td><?php echo $data['Nama Siswa'];?></td>
+                    <td><?php echo $data['Kelas'];?></td>
                 </tr>
-                
+                <?php } ?>
             </tbody>
         </table>
     </div>
