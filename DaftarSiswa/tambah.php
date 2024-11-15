@@ -67,8 +67,9 @@
                 <label> NISN </label>
                 <input type="text" name="NISN" placeholder="NISN" class="form-control" style="width :200 px">
             </div>
-
-            <button class="btn btn-primary" name="btnSimpan" id="btnSimpan"> Simpan </button>
+            <button class="btn btn-success" name="btnSimpan" id="btnSimpan" style="margin-bottom: 5px;"> Simpan </button>
+            <button style="margin-top:-5px;" type="button" class="btn btn-danger" onclick="window.location.href='DaftarSiswa.php'">Cancel</button>
+            
         </form>
     </div>
 </body>
