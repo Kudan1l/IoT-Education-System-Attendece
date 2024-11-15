@@ -1,11 +1,14 @@
-/* SIDEBAR */
-
 * {
     margin: 0;
     padding: 0;
+    
   }
 
-  
+  /* body {
+    background-color: #7397b1;
+  } */
+
+  /* SIDEBAR */
   
   #sidebar {
     color: #fff;
@@ -135,6 +138,20 @@
     margin-right: 20px;
   }
 
+/* tanggal */
+input[type="date"] {
+    width: 20%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    transition: all 0.3s ease;
+    
+}
+
   /* table*/
 
   .kelas p{
@@ -143,37 +160,85 @@
     font-family: 'Times New Roman', Times, serif;
   }
 
+  table {
+    border-radius: 10px;
+    overflow: hidden;
+    /* box-shadow: 10px 10px 2px black; */
+    filter: drop-shadow(1px 1px 10px grey);
+  }
+
   .tabel {
     width: 100%;
     border-collapse: collapse;
     color: white;
     justify-content: center;
     border-color: black;
+    height: 200px;
+    
   }
 
   thead {
     text-align: center;
   }
 
-  .number{
+  .number {
     text-align: center;
   }
 
   th, td{
     border: 2px solid black;
+    font-weight: 500;
+    padding: 10px;
   }
 
   td {
     text-align:start;
+    color: black;
+    
   }
   th {
     background-color: #2c3e50;
+    color: white;
   }
 
   tbody {
     background-color: #2c3e50;
   }
 
+  table tr:nth-child(even) {
+    background-color: #7397b1; /* Warna abu-abu terang untuk baris genap */
+  }
+
+  /* Warna latar belakang untuk baris ganjil */
+  table tr:nth-child(odd) {
+    background-color: #ffffff; /* Warna putih untuk baris ganjil */
+  }
+
+
   .keterangan input {
     margin-left: 20px;
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    
+  }
+
+  .tombol {
+    margin-top: 20px;
+    background-color: #2c3e50;
+    color: #ffffff;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    box-shadow: 0px 5px 3px black;
+    border: 1px solid #7397b1;
+  }
+
+  .tombol:hover {
+    background-color: #7397b1;
+    color: black;
+    border-color: black;
   }

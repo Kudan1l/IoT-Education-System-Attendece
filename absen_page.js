@@ -20,9 +20,10 @@ $(document).ready(function () {
       const tbody = document.querySelector('tbody');
       
       // Loop melalui data dan menambahkan baris ke tabel
-      data.forEach((item) => {
+      data.forEach((item, index) => {
           const tr = document.createElement('tr');
           tr.innerHTML = `
+              <td class="number"> ${index + 1}. </td>
               <td>${item. id_siswa} . </td>
               <td>${item.NISN}</td>
               <td>${item.NAMA}</td>
