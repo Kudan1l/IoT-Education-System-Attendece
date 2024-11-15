@@ -10,7 +10,6 @@
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous" />
-
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
@@ -18,95 +17,101 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="Stack">
-      <div class="Box">
-        <div class="Welcome">
-          <h3 class="title">Selamat Datang</h3>
-          <h3 class="UserName">Agung Laksono Putra</h3>
-        </div>
-        <nav class="Menu">
-          <a href="" class="ListMenu ListMenu-active">
-            <div class="MenuIcon">
-              <i class="bi bi-grid-1x2-fill"></i>
-            </div>
-            <div class="MenuText">
-              <span class="typography"> Dashboard </span>
-            </div>
-          </a>
+    <div id="sidebar">
+      <i class="bi bi-x-circle-fill" id="close-menu"></i>
+      <div id="sidebar-header">
+        <h3 id="welcome">Selamat Datang</h3>
+        <h3 id="UserName">SMA Darul Hikmah</h3>
+      </div>
+      <nav id="sidebar-menu">
+        <a href="" class="active">
+          <i class="bi bi-grid-1x2-fill"></i>
+          <span class="typography"> Dashboard </span>
+        </a>
+        <a href="DaftarSiswa/DaftarSiswa.php">
+          <i class="bi bi-people-fill"></i>
+          <span class="typography"> Daftar Siswa </span>
+        </a>
+        <a href="">
+          <i class="bi bi-person-fill-check"></i>
+          <span class="typography"> Absensi </span>
+        </a>
+        <a href="">
+          <i class="bi bi-file-earmark-bar-graph-fill"></i>
+          <span class="typography"> Laporan </span>
+        </a>
+      </nav>
 
-          <a href="" class="ListMenu">
-            <div class="MenuIcon">
-              <i class="bi bi-people-fill"></i>
-            </div>
-            <div class="MenuText">
-              <span class="typography"> Daftar Siswa </span>
-            </div>
-          </a>
+      <!-- <a href="" id="logout">
+        <i class="bi bi-box-arrow-right"></i>
+        <span>Log Out</span>
+      </a> -->
 
-          <a href="" class="ListMenu">
-            <div class="MenuIcon">
-              <i class="bi bi-person-fill-check"></i>
-            </div>
-            <div class="MenuText">
-              <span class="typography"> Absensi </span>
-            </div>
-          </a>
+      <button id="logout">
+        <i class="bi bi-box-arrow-right"></i>
+        <span>Log Out</span>
+      </button>
+    </div>
 
-          <a href="" class="ListMenu">
-            <div class="MenuIcon">
-              <i class="bi bi-file-earmark-bar-graph-fill"></i>
-            </div>
-            <div class="MenuText">
-              <span class="typography"> Laporan </span>
-            </div>
-          </a>
-        </nav>
-        <div class="Menu-LogOut">
-          <button type="button">
-            <i class="bi bi-box-arrow-right"></i>
-            <span>Log Out</span>
-          </button>
-        </div>
+    <div class="content" id="main-content">
+      <div class="action">
+        <i class="bi bi-list" id="hamburger-menu"></i>
+        <h2>Dashboard</h2>
       </div>
 
-      <main>
-        <div class="title-box">
-          <h1>Dashboard</h1>
-        </div>
-        <div class="text-center .content-grid">
-          <div class="row gap-3">
-            <div class="col content-item">
+      <div class="row row-cols-1 row-cols-md-1 row-cols-lg-4 g-4 grid-menu">
+        <div class="col">
+          <div class="card w-100">
+            <div class="card-body">
               <i class="bi bi-people-fill"></i>
               <div class="details">
                 <span class="title-item">Total Siswa</span>
                 <span class="count siswa">200</span>
               </div>
             </div>
-            <div class="col content-item">
+          </div>
+        </div>
+        <div class="col">
+          <div class="card w-100">
+            <div class="card-body">
               <i class="bi bi-building-fill"></i>
               <div class="details">
                 <span class="title-item">Total Kelas</span>
                 <span class="count kelas">2</span>
               </div>
             </div>
-            <div class="col content-item">
+          </div>
+        </div>
+        <div class="col">
+          <div class="card w-100">
+            <div class="card-body">
               <i class="bi bi-check2-square"></i>
               <div class="details">
-                <span class="title-item"
-                  >Total Presensi <br />
-                  Hari Ini</span
-                >
+                <span class="title-item">Total Presensi <br />Hari Ini</span>
                 <span class="count kelas">130</span>
               </div>
             </div>
           </div>
         </div>
-      </main>
+        <div class="col">
+          <div class="card w-100">
+            <div class="card-body">
+              <i class="bi bi-calendar-range"></i>
+              <div class="details">
+                <span class="title-item">Jadwal <br />Hari Ini</span>
+                <span class="count jadwal">1</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="module" src="JS/navbar.js"></script>
   </body>
 </html>

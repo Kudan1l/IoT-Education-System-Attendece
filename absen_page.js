@@ -40,7 +40,4 @@ $(document).ready(function () {
   .catch(error => {
       console.error('Error fetching data:', error);
   });
-
 });
-
-

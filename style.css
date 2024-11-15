@@ -1,128 +1,154 @@
-.Stack {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  min-height: 100vh;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.Box {
+#sidebar {
+  color: #fff;
   background-color: #2c3e50;
-  display: flex;
-  flex-direction: column;
   width: 300px;
   min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 30px 20px 30px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s;
 }
 
-.Welcome {
-  color: #fff;
-  text-align: center;
-  padding: 40px 30px;
+#sidebar.active {
+  left: -300px;
 }
 
-.Welcome .title {
-  font-weight: bold;
+#sidebar #close-menu {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 15px;
 }
 
-.Welcome .UserName {
+#sidebar i {
+  margin-right: 12px;
   font-size: 1.3rem;
-  padding-top: 6px;
 }
 
-.Menu {
-  padding: 0px 30px;
-  box-sizing: inherit;
+#sidebar #sidebar-header {
+  padding-bottom: 30px;
 }
 
-.Menu .ListMenu {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  color: #fff;
-  font-size: 1.2rem;
-  text-decoration: none;
-  padding: 8px 20px;
-  margin-bottom: 10px;
+#sidebar-header h3 {
+  text-align: left;
+  font-size: 1.3rem;
 }
 
-.Menu .ListMenu-active {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  color: #2c3e50;
-  font-size: 1.2rem;
-  text-decoration: none;
-  padding: 8px 20px;
-  background-color: #fff;
-  border-radius: 8px;
-}
-
-.Menu .ListMenu .MenuIcon {
-  margin-right: 10px;
-}
-
-.Menu-LogOut {
-  margin-top: auto;
-  padding: 40px 30px;
-}
-
-.Menu-LogOut button {
-  display: inline-flex;
-  text-decoration: none;
-  color: #fff;
-  background-color: transparent !important;
-  border: none;
-  padding: 10px 0px;
-  font-size: 1.2rem;
-}
-
-.Menu-LogOut i {
-  margin-right: 10px;
-}
-
-main {
-  background-color: #fff;
-  width: calc(100% - 300px);
-  padding: 0px 30px;
-}
-
-main .title-box {
-  padding-top: 40px;
-}
-
-main .content-grid {
-  width: 100%;
-  padding-top: 20px;
-}
-
-.content-item {
-  background-color: #b8e8ff;
-  padding: 20px 50px;
+#sidebar #welcome {
+  font-size: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-sizing: border-box;
-  border-radius: 8px;
-  border-bottom: 8px solid #2c3e50;
 }
 
-.content-item i {
-  font-size: 3rem;
+#sidebar-header #welcome {
+  font-weight: bold;
 }
 
-.content-item .details {
+#sidebar a {
+  color: #ffffff;
   font-size: 1.2rem;
+  padding: 12px;
+  margin-bottom: 12px;
+  text-decoration: none;
+  display: block;
+  border-radius: 8px;
+}
+
+#sidebar-menu .active,
+#sidebar a:hover {
+  background-color: #fff;
+  color: #2c3e50;
+}
+
+#sidebar #logout {
+  margin-top: auto;
+  text-align: left;
+  padding: 12px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+#sidebar #logout:hover {
+  color: #2c3e50;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.content {
+  font-size: 1.2rem;
+  margin-left: 300px;
+  padding: 20px;
+  transition: margin-left 0.3s;
+}
+.content.active {
+  margin-left: 0px;
+}
+
+.content .action {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: start;
   align-items: center;
 }
 
-.content-item .details .title-item {
+.action #hamburger-menu {
+  border: 2px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 0 8px;
+  margin-right: 20px;
+}
+
+.action h2 {
+  font-size: 3rem;
+}
+
+.content .grid-menu {
+  padding-top: 20px;
+}
+
+.card {
+  border: none;
+  border-radius: 8px;
+  background-color: #b8e8ff;
+  height: 100%;
+  border-bottom: 10px solid #2c3e50;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+.card-body i {
+  font-size: 3rem;
+}
+
+.card-body .details {
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
-.content-item .details .count {
+.card-body .count {
   padding-top: 5px;
-  text-align: center;
   font-weight: bold;
 }
