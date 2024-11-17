@@ -17,14 +17,13 @@ $(document).ready(function () {
   fetch('../iotedu/absen_page.php')
   .then(response => response.json())  // Mengubah response menjadi format JSON
   .then(data => {
-      const tbody = document.querySelector('tbody');
+      const tbody = document.querySelector('#absen-tbody');
       
       // Loop melalui data dan menambahkan baris ke tabel
       data.forEach((item, index) => {
           const tr = document.createElement('tr');
           tr.innerHTML = `
               <td class="number"> ${index + 1}. </td>
-              <td>${item. id_siswa} . </td>
               <td>${item.NISN}</td>
               <td>${item.NAMA}</td>
               <td class="keterangan">
@@ -40,4 +39,7 @@ $(document).ready(function () {
   .catch(error => {
       console.error('Error fetching data:', error);
   });
+
 });
+
+

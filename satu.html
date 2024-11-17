@@ -69,18 +69,56 @@
             </div>
         </div>
     
-        <div class="kelas">
-            <p>
-                KELAS X-MIPA-1
-            </p>
-        </div>
+        
         <form action="#" method="post" name="absen">
-            <input type="date" class="tanggal">
+            <table class="tabel1">
+                <tbody>
+                    <tr>
+                        <td class="label">
+                            <label for="kelas" class="pilih">Pilih Kelas :</label>
+                        </td>
+                        <td>
+                            <select class="pilih1" id="kelas" name="kelas">
+                                <option value="X">Kelas X</option>
+                                <option value="XI">Kelas XI</option>
+                                <option value="XII">Kelas XII</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">
+                            <label for="pelajaran" class="pilih">Mata Pelajaran :</label>
+                        </td>
+                        <td>
+                            <select class="pilih1" id="pelajaran" name="pelajaran">
+                                <option value="MTK Wajib">MTK Wajib</option>
+                                <option value="MTK Peminatan">MTK Peminatan</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">
+                            <label for="tanggal" class="pilih">Tanggal Hari Ini :</label>
+                        </td>
+                        <td>
+                            <input type="date" id="tanggal" name="tanggal">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">
+                            <label for="deskripsi" class="pilih">Deskripsi Kegiatan :</label>
+                        </td>
+                        <td>
+                            <textarea id="deskripsi" placeholder="Masukkan Deskripsi" rows="4" cols="50"></textarea>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
             <table class="tabel">
                 <thead>
                     <tr>
                         <th>No.</th>
-                        <th>ID CARD</th>
                         <th>
                             NISN
                         </th>
@@ -88,12 +126,15 @@
                         <th>KEHADIRAN</th>
                     </tr>
                 </thead>
-                <tbody>              
+                <tbody id="absen-tbody">
+                   
                 </tbody>
             </table>
-            <div class="container">
-            <button class="tombol" type="submit"> SUBMIT
+
+            <div class="button">
+                <button class="tombol" type="submit"> SUBMIT </button>
             </div>
+            
         </form> 
     </div>
 

@@ -1,3 +1,5 @@
+
+
 * {
     margin: 0;
     padding: 0;
@@ -138,12 +140,64 @@
     margin-right: 20px;
   }
 
+  /* setup form */
+  
+  
+  /* kelas */
+  .kelas {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .pilih {
+    font-size: 25px;
+    display: flex;
+  }
+
+  .pilih, #kelas{
+    display: inline-block;
+    font-size: 20px;
+    vertical-align: middle;  /* Menyelaraskan elemen secara vertikal */
+    margin: 0;
+}
+
+  .pilih1, #pelajaran{
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    border: 3px solid #ccc;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  /* mapel */
+  .mapel {
+    margin-bottom: 10px;
+  }
+
 /* tanggal */
+.tanggal {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.pilih, #tanggal{
+    display: inline-block;
+     vertical-align: middle;  /*Menyelaraskan elemen secara vertikal */
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
 input[type="date"] {
-    width: 20%;
+    width: 50%;
     padding: 12px 15px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
+    border: 3px solid #ccc;
     border-radius: 6px;
     font-size: 16px;
     background-color: #fff;
@@ -152,20 +206,56 @@ input[type="date"] {
     
 }
 
+/* deskripsi */
+#deskripsi {
+  font-size: 20px;
+  border-radius: 6px;
+  border: 3px solid #ccc;
+  font-weight: 500;
+}
+
   /* table*/
 
-  .kelas p{
-    font-size: 20px;
-    font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
+  .tabel1 {
+    border: none;
+    margin-bottom: 20px;
+    table-layout: auto;
+    width: auto;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
   }
 
-  table {
-    border-radius: 10px;
-    overflow: hidden;
-    /* box-shadow: 10px 10px 2px black; */
-    filter: drop-shadow(1px 1px 10px grey);
+  .tabel1 td {
+    border: none;
+    padding: 10px;
+    vertical-align: middle;
   }
+
+  .tabel1 td.label {
+    display: flex;
+    align-items: center;
+  }
+
+  .pilih {
+    display: inline-block;
+    margin-right: 10px;
+    white-space: nowrap;
+  }
+
+  .pilih1, textarea, input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Styling untuk textarea */
+textarea {
+    resize: vertical;
+}
+
+/* tabel absen */
 
   .tabel {
     width: 100%;
@@ -175,6 +265,10 @@ input[type="date"] {
     border-color: black;
     height: 200px;
     
+    border-radius: 10px;
+    overflow: hidden;
+    /* box-shadow: 10px 10px 2px black; */
+    filter: drop-shadow(1px 1px 10px grey);
   }
 
   thead {
@@ -186,7 +280,7 @@ input[type="date"] {
   }
 
   th, td{
-    border: 2px solid black;
+    
     font-weight: 500;
     padding: 10px;
   }
@@ -201,31 +295,38 @@ input[type="date"] {
     color: white;
   }
 
-  tbody {
+
+  tbody .tabel {
     background-color: #2c3e50;
   }
 
-  table tr:nth-child(even) {
+  .tabel tr:nth-child(even) {
     background-color: #7397b1; /* Warna abu-abu terang untuk baris genap */
   }
 
   /* Warna latar belakang untuk baris ganjil */
-  table tr:nth-child(odd) {
+  .tabel tr:nth-child(odd) {
     background-color: #ffffff; /* Warna putih untuk baris ganjil */
   }
 
 
   .keterangan input {
     margin-left: 20px;
+    flex-wrap: wrap;
   }
-
-  .container {
+  
+  .keterangan {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .button {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    
   }
-
+  
   .tombol {
     margin-top: 20px;
     background-color: #2c3e50;
@@ -236,9 +337,10 @@ input[type="date"] {
     box-shadow: 0px 5px 3px black;
     border: 1px solid #7397b1;
   }
-
+  
   .tombol:hover {
     background-color: #7397b1;
     color: black;
     border-color: black;
   }
+  
