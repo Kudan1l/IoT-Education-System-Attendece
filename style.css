@@ -121,7 +121,7 @@
   padding-top: 20px;
 }
 
-.card {
+.grid-menu .card {
   border: none;
   border-radius: 8px;
   background-color: #b8e8ff;
@@ -129,7 +129,7 @@
   border-bottom: 10px solid #2c3e50;
 }
 
-.card-body {
+.grid-menu .card-body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -137,18 +137,32 @@
   padding: 20px 50px;
 }
 
-.card-body i {
+.grid-menu .card-body i {
   font-size: 3rem;
 }
 
-.card-body .details {
+.grid-menu .card-body .details {
   font-size: 1.3rem;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-.card-body .count {
+.grid-menu .card-body .count {
   padding-top: 5px;
   font-weight: bold;
+}
+
+.jadwal {
+  padding-top: 2rem;
+}
+
+.jadwal_list .card {
+  margin-bottom: 12px;
+  border-color: #2c3e50;
+}
+
+.jadwal_list .card-body {
+  display: flex;
+  justify-content: space-between;
 }
