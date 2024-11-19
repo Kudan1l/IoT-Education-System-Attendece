@@ -1,7 +1,7 @@
 <!-- Proses penyimpanan -->
 
 <?php
-    include "koneksi.php";
+    include "Koneksi.php";
 
     //jika tombol simpan diklik
     if (isset($_POST['btnSimpan'])) {
@@ -12,7 +12,7 @@
         $nisn = $_POST['NISN'];
 
         //simpan ke tabel siswa
-        $simpan = mysqli_query($konek , "insert into siswa(ID_Kartu, Nama_Siswa, Kelas, NISN)values('$idkartu' ,'$namasiswa', '$kelas', '$nisn')");
+        $simpan = mysqli_query($conn , "insert into siswa(ID_Kartu, Nama_Siswa, Kelas, NISN)values('$idkartu' ,'$namasiswa', '$kelas', '$nisn')");
 
         //jika berhasil tersimpan, tampilkan pesan tersimpan,
         //kembali ke data siswa
@@ -23,6 +23,7 @@
                 location.replace('DaftarSiswa.php');
             </script>
             ";
+            mysqli_query($conn, "DELETE FROM tmprfid");
         }
         else {
             echo "
@@ -51,10 +52,7 @@
 
         <!-- form input -->
         <form method="POST">
-            <div class="form-group">
-                <label> ID Kartu </label>
-                <input type="text" name="ID_Kartu" placeholder="Nomor Kartu RFID" class="form-control" style="width :200 px">
-            </div>
+            <div id="nocard"></div>
             <div class="form-group">
                 <label> Nama Siswa </label>
                 <input type="text" name="Nama_Siswa" placeholder="Nama Lengkap" class="form-control" style="width :200 px">
@@ -72,5 +70,15 @@
             
         </form>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            setInterval(function(){
+                $("#nocard").load('idCard.php')
+            }, 500);
+        });  
+    </script>
 </body>
 </html>
