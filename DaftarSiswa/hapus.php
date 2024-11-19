@@ -7,7 +7,7 @@
     // Jika tombol konfirmasi hapus ditekan
     if (isset($_POST['btnHapus'])) {
         //hapus data
-        $hapus = mysqli_query($konek, "delete from siswa where id='$id'");
+        $hapus = mysqli_query($conn, "delete from biodata_siswa where id='$id'");
 
         //jika berhasil terhapus tampilan pesan Terhapus
         //kemudia kembali ke data siswa

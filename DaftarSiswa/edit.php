@@ -1,14 +1,14 @@
 <!-- Proses penyimpanan -->
 
 <?php
-    include "koneksi.php";
+    include "Koneksi.php";
     
     //baca ID data yang akan di edit
 
     $id = $_GET['id'];
 
     //baca data siswa berdasarkan id
-    $cari = mysqli_query($konek, "select * from siswa where id='$id'");
+    $cari = mysqli_query($conn, "select * from siswa where id='$id'");
     $hasil = mysqli_fetch_array($cari);
 
 
@@ -21,7 +21,7 @@
         $nisn = $_POST['NISN'];
 
         //simpan ke tabel siswa
-        $simpan = mysqli_query($konek , "update siswa set ID_Kartu ='$idkartu' , Nama_Siswa='$namasiswa', Kelas='$kelas', NISN='$nisn' where id='$id'");
+        $simpan = mysqli_query($conn , "update siswa set ID_Kartu ='$idkartu' , Nama_Siswa='$namasiswa', Kelas='$kelas', NISN='$nisn' where id='$id'");
 
         //jika berhasil tersimpan, tampilkan pesan tersimpan,
         //kembali ke data siswa
