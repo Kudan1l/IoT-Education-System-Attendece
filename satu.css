@@ -1,0 +1,341 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* body {
+  background-color: #7397b1;
+} */
+
+/* SIDEBAR */
+
+#sidebar {
+  color: #fff;
+  background-color: #2c3e50;
+  width: 300px;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 30px 20px 30px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s;
+}
+
+#sidebar.active {
+  left: -300px;
+}
+
+#sidebar #close-menu {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 15px;
+}
+
+#sidebar i {
+  margin-right: 12px;
+  font-size: 1.3rem;
+}
+
+#sidebar #sidebar-header {
+  padding-bottom: 30px;
+}
+
+#sidebar-header h3 {
+  text-align: left;
+  font-size: 1.3rem;
+}
+
+#sidebar #welcome {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#sidebar-header #welcome {
+  font-weight: bold;
+}
+
+#sidebar a {
+  color: #ffffff;
+  font-size: 1.2rem;
+  padding: 12px;
+  margin-bottom: 12px;
+  text-decoration: none;
+  display: block;
+  border-radius: 8px;
+}
+
+#sidebar-menu .active,
+#sidebar a:hover {
+  background-color: #fff;
+  color: #2c3e50;
+}
+
+#sidebar #logout {
+  margin-top: auto;
+  text-align: left;
+  padding: 12px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+#sidebar #logout:hover {
+  color: #2c3e50;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+/* konten */
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.judul {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 70px;
+}
+
+.content {
+  font-size: 1.2rem;
+  margin-left: 300px;
+  padding: 20px;
+  transition: margin-left 0.3s;
+}
+.content.active {
+  margin-left: 0px;
+}
+
+.content .action {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+.action #hamburger-menu {
+  border: 2px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 0 8px;
+  margin-right: 20px;
+}
+
+/* setup form */
+
+/* kelas */
+.kelas {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.pilih {
+  font-size: 25px;
+  display: flex;
+}
+
+.pilih,
+#kelas {
+  display: inline-block;
+  font-size: 20px;
+  vertical-align: middle; /* Menyelaraskan elemen secara vertikal */
+  margin: 0;
+}
+
+.pilih1,
+#pelajaran {
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  border: 3px solid #ccc;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+/* mapel */
+.mapel {
+  margin-bottom: 10px;
+}
+
+/* tanggal */
+.tanggal {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.pilih,
+#tanggal {
+  display: inline-block;
+  vertical-align: middle; /*Menyelaraskan elemen secara vertikal */
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+input[type="date"] {
+  width: 50%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 3px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+/* deskripsi */
+#deskripsi {
+  font-size: 20px;
+  border-radius: 6px;
+  border: 3px solid #ccc;
+  font-weight: 500;
+}
+
+/* table*/
+
+.tabel1 {
+  border: none;
+  margin-bottom: 20px;
+  table-layout: auto;
+  width: auto;
+  max-width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tabel1 td {
+  border: none;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.tabel1 td.label {
+  display: flex;
+  align-items: center;
+}
+
+.pilih {
+  display: inline-block;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.pilih1,
+textarea,
+input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Styling untuk textarea */
+textarea {
+  resize: vertical;
+}
+
+/* tabel absen */
+
+.tabel {
+  width: 100%;
+  border-collapse: collapse;
+  color: white;
+  justify-content: center;
+  border-color: black;
+  height: 200px;
+
+  border-radius: 10px;
+  overflow: hidden;
+  /* box-shadow: 10px 10px 2px black; */
+  filter: drop-shadow(1px 1px 10px grey);
+}
+
+thead {
+  text-align: center;
+}
+
+.number {
+  text-align: center;
+}
+
+th,
+td {
+  font-weight: 500;
+  padding: 10px;
+}
+
+td {
+  text-align: start;
+  color: black;
+}
+th {
+  background-color: #2c3e50;
+  color: white;
+}
+
+tbody .tabel {
+  background-color: #2c3e50;
+}
+
+.tabel tr:nth-child(even) {
+  background-color: #7397b1; /* Warna abu-abu terang untuk baris genap */
+}
+
+/* Warna latar belakang untuk baris ganjil */
+.tabel tr:nth-child(odd) {
+  background-color: #ffffff; /* Warna putih untuk baris ganjil */
+}
+
+.keterangan input {
+  margin-left: 20px;
+  flex-wrap: wrap;
+}
+
+.keterangan {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tombol {
+  margin-top: 20px;
+  background-color: #2c3e50;
+  color: #ffffff;
+  border-radius: 5px;
+  width: 100px;
+  height: 50px;
+  box-shadow: 0px 5px 3px black;
+  border: 1px solid #7397b1;
+}
+
+.tombol:hover {
+  background-color: #7397b1;
+  color: black;
+  border-color: black;
+}

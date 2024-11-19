@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <link rel="stylesheet" href="satu.css" />
+  </head>
+  <body>
+    <div class="row">
+      <div id="sidebar">
+        <i class="bi bi-x-circle-fill" id="close-menu"></i>
+        <div id="sidebar-header">
+          <h3 id="welcome">Selamat Datang</h3>
+          <h3 id="UserName">Agung Laksono Putra</h3>
+        </div>
+        <nav id="sidebar-menu">
+          <a href="dashboard.html">
+            <i class="bi bi-grid-1x2-fill"></i>
+            <span class="typography"> Dashboard </span>
+          </a>
+          <a href="DaftarSiswa/DaftarSiswa.php">
+            <i class="bi bi-people-fill"></i>
+            <span class="typography"> Daftar Siswa </span>
+          </a>
+          <a href="" class="active">
+            <i class="bi bi-person-fill-check"></i>
+            <span class="typography"> Absensi </span>
+          </a>
+          <a href="">
+            <i class="bi bi-file-earmark-bar-graph-fill"></i>
+            <span class="typography"> Laporan </span>
+          </a>
+        </nav>
+
+        <!-- <a href="" id="logout">
+            <i class="bi bi-box-arrow-right"></i>
+            <span>Log Out</span>
+            </a> -->
+
+        <button id="logout">
+          <i class="bi bi-box-arrow-right"></i>
+          <span>Log Out</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="content" id="main-content">
+      <div class="action">
+        <i class="bi bi-list" id="hamburger-menu"></i>
+        <h2>Absensi</h2>
+      </div>
+      <div class="row">
+        <div class="daftarabsen" id="absensi">
+          <div class="judul">
+            <h1>
+              DAFTAR KEHADIRAN SISWA <br />
+              SMA DARUL HIKMAH
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <form action="#" method="post" name="absen">
+        <table class="tabel1">
+          <tbody>
+            <tr>
+              <td class="label">
+                <label for="kelas" class="pilih">Pilih Kelas :</label>
+              </td>
+              <td>
+                <select class="pilih1" id="kelas" name="kelas">
+                  <option value="default">--</option>
+                  <option value="10ipa1">10 IPA 1</option>
+                  <option value="11ipa1">11 IPA 1</option>
+                  <option value="12ipa1">12 IPA 1</option>
+                  <option value="12ips1">12 IPS 1</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">
+                <label for="pelajaran" class="pilih">Mata Pelajaran :</label>
+              </td>
+              <td>
+                <select class="pilih1" id="pelajaran" name="pelajaran">
+                  <option value="default">--</option>
+                  <option value="MTK Wajib">MTK Wajib</option>
+                  <option value="MTK Peminatan">MTK Peminatan</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">
+                <label for="tanggal" class="pilih">Tanggal Hari Ini :</label>
+              </td>
+              <td>
+                <input type="date" id="tanggal" name="tanggal" />
+              </td>
+            </tr>
+            <tr>
+              <td class="label">
+                <label for="deskripsi" class="pilih"
+                  >Deskripsi Kegiatan :</label
+                >
+              </td>
+              <td>
+                <textarea
+                  id="deskripsi"
+                  placeholder="Masukkan Deskripsi"
+                  rows="4"
+                  cols="50"></textarea>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="tabel">
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>NISN</th>
+              <th>NAMA</th>
+              <th>KEHADIRAN</th>
+            </tr>
+          </thead>
+          <tbody id="absen-tbody"></tbody>
+        </table>
+
+        <div class="button">
+          <button class="tombol" type="submit">SUBMIT</button>
+        </div>
+      </form>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="module" src="absen_page.js"></script>
+  </body>
+</html>
