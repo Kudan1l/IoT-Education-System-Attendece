@@ -112,7 +112,7 @@ $imageedit = "img/clip.png";
             
             <!-- tombol tambah data karyawan -->
              <a href="tambah.php"><button class="btn btn-primary" style="float: left; ">+ Tambah Data</button></a>
-             <a href=" /Tubes/dashboard.html"><button style="margin-top: 1px; margin-left: 569px;" type="button" class="btn btn-danger" >Kembali</button></a>
+             <a href=" /Tubes/dashboard.html"><button style="margin-top: 1px; margin-left: 950px;" type="button" class="btn btn-danger" >Kembali</button></a>
         </div>
         
         <script
