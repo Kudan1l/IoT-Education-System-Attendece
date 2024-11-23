@@ -56,7 +56,7 @@
 </head>
 <body>
     <div class="container-fluid">
-        <h3> Tambah Data Siswa </h3>
+        <h3> Edit Data Siswa </h3>
 
         <!-- form input -->
         <form method="POST">
